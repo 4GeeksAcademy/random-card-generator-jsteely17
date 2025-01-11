@@ -27,12 +27,12 @@ body {
   font-weight: bold;
 }
 
-.card .top-left {
+.card .top {
   top: 10px;
   left: 10px;
 }
 
-.card .bottom-right {
+.card .bottom {
   bottom: 10px;
   right: 10px;
   transform: rotate(180deg);

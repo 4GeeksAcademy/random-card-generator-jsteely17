@@ -7,7 +7,7 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  const suits = ["heart", "diamond", "spade", "club"];
+  const suits = ["♥", "♦", "♠", "♣"];
   const values = [
     "2",
     "3",
@@ -23,18 +23,17 @@ window.onload = function() {
     "K",
     "A"
   ];
-  const suitSymbols = { heart: "♥", diamond: "♦", spade: "♠", club: "♣" };
 
   const randomSuit = suits[Math.floor(Math.random() * suits.length)];
   const randomValue = values[Math.floor(Math.random() * values.length)];
-  const suitSymbol = suitSymbols[randomSuit];
+  const suitElement = suits[randomSuit];
 
   const cardElement = document.getElementById("card");
   cardElement.classList.add(randomSuit);
 
   cardElement.innerHTML = `
-    <div class="corner top-left">${suitSymbol}</div>
+    <div class="corner top">${suitElement}</div>
     <div>${randomValue}</div>
-    <div class="corner bottom-right">${suitSymbol}</div>
+    <div class="corner bottom">${suitElement}</div>
   `;
 };
